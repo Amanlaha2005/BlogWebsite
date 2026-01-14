@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Django Blog{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <!-- NAV SCROLLER -->
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" href="#">World</a>
+      <a class="p-2 text-muted" href="#">U.S.</a>
+      <a class="p-2 text-muted" href="#">Technology</a>
+      <a class="p-2 text-muted" href="#">Design</a>
+      <a class="p-2 text-muted" href="#">Culture</a>
+      <a class="p-2 text-muted" href="#">Business</a>
+      <a class="p-2 text-muted" href="#">Politics</a>
+      <a class="p-2 text-muted" href="#">Opinion</a>
+      <a class="p-2 text-muted" href="#">Science</a>
+      <a class="p-2 text-muted" href="#">Health</a>
+      <a class="p-2 text-muted" href="#">Style</a>
+      <a class="p-2 text-muted" href="#">Travel</a>
+    </nav>
+  </div>
+
+  <!-- JUMBOTRON -->
+  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark"
+       style="background-image: url('{% static 'images/BlogImg.jpg' %}');
+              background-blend-mode: overlay;
+              background-size: cover;">
+    <div class="col-md-8 px-0">
+      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+      <p class="lead my-3">
+        Multiple lines of text that form the lede, informing new readers quickly.
+      </p>
+      <p class="lead mb-0">
+        <a href="#" class="text-white font-weight-bold">Continue reading...</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- FEATURED CARDS -->
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h3>Post Title</h3>
+          <small class="text-muted">Nov 11 | Author</small>
+          <p>Some quick example text to build on the card title.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h3>Post Title</h3>
+          <small class="text-muted">Nov 11 | Author</small>
+          <p>Some quick example text to build on the card title.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main role="main" class="container p-0">
+    <div class="row">
+
+      <div class="col-md-8 blog-main">
+        <div class="blog-post">
+          <h2 class="blog-post-title">Sample blog post</h2>
+          <p class="blog-post-meta">
+            January 1, 2014 by <a href="#">Mark</a>
+          </p>
+
+          <p>
+            This blog post shows a few different types of content supported by Bootstrap.
+          </p>
+
+          <p>
+            Cum sociis natoque penatibus et magnis
+            <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+          </p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="col-md-4 blog-sidebar">
+        <div class="p-3 mb-3 bg-light rounded">
+          <h4 class="font-italic">About</h4>
+          <p class="mb-0">
+            Etiam porta sem malesuada magna mollis euismod.
+          </p>
+        </div>
+
+        <div class="p-3">
+          <h4 class="font-italic">Follow Us</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ol>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+</div>
+
+{% endblock %}
