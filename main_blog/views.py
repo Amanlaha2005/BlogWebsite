@@ -61,6 +61,6 @@ def BlogLogin(request):
 def BlogLogout(request):
     if not request.user.is_authenticated:
         messages.error(request,"Please Logged In first")
-        return redirect("base")
+        return redirect("BlogLogin")
     logout(request)
     return redirect('base')
